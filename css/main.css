@@ -1,0 +1,78 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;      
+}
+
+.navbar {
+  height: 120px;
+  background-color: white;
+  border-color: white;
+}
+
+.logo {
+  margin-top: 20px;
+  margin-bottom: 35px;
+  background-image: url("../images/logo.svg");
+  background-repeat: no-repeat;
+  height: 105px;
+  background-position: right;
+}
+
+.navigation {
+  font-weight: 700;
+  font-size: 1.99vw;
+  margin-top: 50px;
+  color: black;
+}
+
+.header-link {
+  position: absolute;
+  left: -0.5em;
+  opacity: 0;
+
+  -webkit-transition: opacity 0.2s ease-in-out 0.1s;
+  -moz-transition: opacity 0.2s ease-in-out 0.1s;
+  -ms-transition: opacity 0.2s ease-in-out 0.1s;
+}
+
+h2:hover .header-link,
+h3:hover .header-link,
+h4:hover .header-link,
+h5:hover .header-link,
+h6:hover .header-link {
+  opacity: 1;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 40px;  
+  margin-top: 0px;
+}
+
+.page-body {
+}
+
+.page-content {
+  margin-bottom: 40px;  
+}
+
+.documentation-platform h1 {
+  font-weight: 300;
+  font-size: 46px;  
+}
+
+.documentation-body{
+  margin-top: 30px;
+  margin-bottom: 35px;
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 100;
+}

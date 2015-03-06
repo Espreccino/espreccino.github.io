@@ -1,0 +1,20 @@
+markdown: redcarpet
+highlighter: pygments
+redcarpet:
+    extensions: [with_toc_data]
+exclude:
+  - bower_components
+  - node_modules
+  - www
+  - js
+collections:
+  ios:
+    platform: iOS SDK
+    output: true
+  android:
+    platform: Android SDK
+    output: true
+  web:
+    platform: Web SDK
+    output: true
+    
