@@ -20,9 +20,16 @@ body{
 
 .navigation {
   font-weight: 700;
-  font-size: 1.99vw;
-  margin-top: 50px;
-  color: black;
+  font-size: 1.5vw;
+  margin-top: 45px;
+}
+
+.navbar-toggle {
+  margin-top: 45px;
+}
+
+.navigation>.nav>li>a {
+  color: black;  
 }
 
 .header-link {
