@@ -2,6 +2,7 @@
 
 layout: default
 title: Sample Application
+permalink: /ios/sample.html
 collection: ios
 collection_title : iOS
 

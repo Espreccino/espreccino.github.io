@@ -58,7 +58,15 @@
       <div class="row documentation-body">
         <div class="col-xs-3 documentation-sidebar">
           {% for item in site.collections[page.collection].docs %}
-            <div><a href="{{ item.url }}">{{ item.title }}</a></div>
+            <div><a href="{{ item.url }}">{{ item.title }}</a>
+              {% if page.permalink == item.permalink %}
+              <ul class="sections">
+              {% for section in item.collection_sections %}
+                <li><a href="#{{ section }}">{{ section }}</a></li>
+              {% endfor %}
+              </ul>
+              {% endif %}
+            </div>
           {% endfor %}
         </div>
         <div class="col-xs-9 documentation-content">

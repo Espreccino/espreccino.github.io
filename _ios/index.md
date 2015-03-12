@@ -2,8 +2,14 @@
 
 layout: default
 title: Getting Started
+permalink: /ios/index.html
 collection: ios
 collection_title : iOS
+collection_sections:
+  - Getting Started
+  - Requirements
+  - SDK Integration
+  - SDK Documentation
 
 ---
 
@@ -106,7 +112,7 @@ Generate Client ID & Client Secret to authenticate your application with PepperT
 6. Starting with iOS 8, to enable location sharing in PepperTalk, you must set a string for the key `NSLocationWhenInUseUsageDescription` or `NSLocationAlwaysUsageDescription` in your app's Info.plist file. For more information refer [Apple Documentation](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18). If neither of the keys are found in the client's Info.plist file, then the location sharing opiton will not be available.
 
 <a id="sdkdocumentation"></a> 
-#SDK Documentation
+# SDK Documentation
 
 <a id="glossary"></a> 
 ##Glossary

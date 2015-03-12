@@ -2,9 +2,16 @@
 
 layout: default
 title: Getting Started
+permalink: /android/index.html
 collection: android
 collection_title : Android
-permalink: /android/index.html
+collection_sections:
+  - Installing
+  - Initialize Pepper Talk
+  - Initiate Chat
+  - Sending Custom Data
+  - Callbacks
+  - Push Notifications
 
 ---
 
@@ -20,11 +27,80 @@ dependencies {
 
 ## Initialize Pepper Talk
 
+```java
+ PepperTalk.getInstance(context)
+                .init(clientId,
+                        clientSecret,
+                        userId)
+                .connect();
+```
+
 ## Initiate Chat
+
+```java
+PepperTalk.getInstance(context)
+                    .chatWithParticipant(userId)
+                    .topicId(topicId)
+                    .topicTitle("Let ride!")
+                    .start();
+```
 
 ## Sending Custom Data
 
+
+```java
+  JSONObject object = new JSONObject();
+  object.put("hello", "its me!");
+  PepperTalk.getInstance(getActivity())
+          .sendCustomData(toUser,
+                  text,
+                  topicId,
+                  topicTitle,
+                  object, new JSONCallback() {
+                      @Override
+                      public void onSuccess(JSONObject jsonObject) {
+                        ...
+                      }
+                      @Override
+                      public void onFail(PepperTalkError error) {
+                        ...
+                      }
+                  });
+```
+
 ## Callbacks
+### MessageListener
+
+This callback is triggered whenever a message arrives for the user. Please note that the callback is invoked on a background thread and you will have to switch to the UI thread to do any UI updates.
+
+```java
+    /**
+     * Message Listener
+     * New incoming.
+     * Ideally used to update unread count on the UI
+     */
+    public interface MessageListener {
+        public void onNewMessage(String userId, String topicId, int unreadCount);
+    }
+```
+
+### ConnectionListener
+
+This callback is triggered to notify the host application of the connection status.
+
+```java
+    /**
+     * Listen to Peppertalk connection status
+     */
+    public interface ConnectionListener {
+        public void onConnecting(int status);
+        public void onConnected();
+        public void onConnectionFailed(PepperTalkError e);
+    }
+```
+
+### CustomDataListener
+
 
 ## Push Notifications
 

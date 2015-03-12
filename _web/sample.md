@@ -2,6 +2,7 @@
 
 layout: default
 title: Sample Application
+permalink: /web/sample.html
 collection: web
 collection_title : Web SDK
 

@@ -2,9 +2,9 @@
 
 layout: default
 title: Sample Application
+permalink: /android/sample.html
 collection: android
 collection_title : Android
-permalink: /android/sample.html
 
 ---
 

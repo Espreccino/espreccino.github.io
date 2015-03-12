@@ -2,9 +2,9 @@
 
 layout: default
 title: Eclipse Users
+permalink: /android/eclipse.html
 collection: android
 collection_title : Android
-permalink: /android/eclipse.html
 
 ---
 

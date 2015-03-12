@@ -2,8 +2,15 @@
 
 layout: default
 title: Getting Started
+permalink: /web/index.html
 collection: ios
 collection_title : Web SDK
+collection_sections:
+  - Introduction
+  - Topic
+  - Initiating a Chat
+  - API 
+  - Events generated
 
 ---
 

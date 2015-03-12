@@ -68,9 +68,22 @@ h1 {
   font-size: 46px;  
 }
 
+ul.sections {
+  list-style: none;
+}
+
 .documentation-body{
   margin-top: 30px;
   margin-bottom: 35px;
+}
+
+.documentation-sidebar a {
+  color: #0a86cb;
+  font-size: 1.5em;
+}
+
+.documentation-sidebar .sections a {
+  font-size: 1.125em;  
 }
 
 .footer {

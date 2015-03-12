@@ -2,9 +2,9 @@
 
 layout: default
 title: API Docs
+permalink: /android/api.html
 collection: android
 collection_title : Android
-permalink: /android/api.html
 
 ---
 
