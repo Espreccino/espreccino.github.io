@@ -1,15 +1,16 @@
 ---
 
 layout: default
-title: Android Sample
+title: Sample Application
 collection: android
+collection_title : Android
+permalink: /android/sample.html
 
 ---
 
-# Sample Application
-
 ## Generate ClientID and Client Secret
 Generate Client ID & Client Secret to authenticate your application with PepperTalk. Follow these steps to generate Client ID & Client Secret:
+
 * Go to [PepperTalk Console](https://console.getpeppertalk.com/dashboard/signup)
 * Fill in the details and signup
 * Validate your email address by clicking on the link you get in your email inbox

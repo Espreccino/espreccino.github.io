@@ -1,12 +1,11 @@
 ---
 
 layout: default
-title: iOS Sample
+title: Sample Application
 collection: ios
+collection_title : iOS
 
 ---
-
-# Sample App
 
 ### Introduction
 This is a sample app to demonstrate the iOS SDK for Pepper Talk.

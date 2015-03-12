@@ -1,11 +1,11 @@
 ---
 
 layout: default
-title: iOS Documentation
+title: Getting Started
 collection: ios
+collection_title : iOS
 
 ---
-# iOS Documentation
 
 <a id="gettingstarted"></a> 
 ##Getting Started

@@ -1,13 +1,15 @@
 ---
 
 layout: default
-title: Eclipse without Gradle or Maven
+title: Eclipse Users
 collection: android
+collection_title : Android
+permalink: /android/eclipse.html
 
 ---
 
 
-# Eclipse without Gradle or Maven
+## Recommendation
 We recommend using Gradle and Android Studio for building your apps. Or dev cycle uses this setup and so all our instructions will be primarily geared for this setup. However if you have an existing app with Eclipse and ADT and would like to integrate Pepper Talk this tutorial may guide you. This was tried on Eclipse Luna with ADT. Your mileage may vary.
 
 ## Dependencies

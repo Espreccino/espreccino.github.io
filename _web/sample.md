@@ -1,12 +1,11 @@
 ---
 
 layout: default
-title: Web Sample
+title: Sample Application
 collection: web
+collection_title : Web SDK
 
 ---
-
-# Web Sample App
 
 ## Introduction
 This is a sample app to demonstrate the JS SDK for Pepper Talk. It contains both the server and the client components. Its built as an Express service for the server and Angular app for the client.

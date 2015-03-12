@@ -1,11 +1,11 @@
 ---
 
 layout: default
-title: Web SDK
+title: Getting Started
 collection: ios
+collection_title : Web SDK
 
 ---
-# Web SDK
 
 ## Introduction
 [*Pepper Talk*](http://getpeppertalk.com/) is a messaging platform built primarily for mobiles. It provides native interfaces for iOS, Android and Web applications via SDK's to enable peer to peer chat for apps. Being mobile ready it has built in support for notifications, delivery indicators, media sharing and others out of the box. The SDK's expose a simple interface to get chat up and running with minimal effort from you the developer. We provide a full fledged chat interface which fits seamlessly into your apps, with customization options. SDK also exposes interfaces to send custom data between users. Callbacks are provided to have tight integration with your app, for incoming messages and unread message counts.
