@@ -6,11 +6,11 @@ permalink: /web/index.html
 collection: ios
 collection_title : Web SDK
 collection_sections:
-  - Introduction
-  - Topic
-  - Initiating a Chat
-  - API 
-  - Events generated
+  - {title: Introduction, link: introduction}
+  - {title: Topic, link: topic}
+  - {title: Initiating a Chat, link: initiating-a-chat}
+  - {title: API, link: api} 
+  - {title: Events Generated, link: events-generated}
 
 ---
 

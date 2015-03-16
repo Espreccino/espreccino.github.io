@@ -6,12 +6,12 @@ permalink: /android/index.html
 collection: android
 collection_title : Android
 collection_sections:
-  - Installing
-  - Initialize Pepper Talk
-  - Initiate Chat
-  - Sending Custom Data
-  - Callbacks
-  - Push Notifications
+  - {title: Installing, link: installing}
+  - {title: Initialize Pepper Talk, link: initialize-pepper-talk}
+  - {title: Initiate Chat, link: initiate-chat}
+  - {title: Sending Custom Data, link: sending-custom-data}
+  - {title: Callbacks, link: callbacks}
+  - {title: Push Notifications, link: push-notifications}
 
 ---
 

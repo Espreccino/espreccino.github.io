@@ -62,7 +62,7 @@
               {% if page.permalink == item.permalink %}
               <ul class="sections">
               {% for section in item.collection_sections %}
-                <li><a href="#{{ section }}">{{ section }}</a></li>
+                <li><a href="#{{ section.link }}">{{ section.title }}</a></li>
               {% endfor %}
               </ul>
               {% endif %}
