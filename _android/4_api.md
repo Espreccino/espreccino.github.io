@@ -9,4 +9,4 @@ collection_title : Android
 ---
 
 ## Javadocs
-Please find the javadocs [here](http://developers.getpeppertalk.com/PepperTalkAndroidSDK/javadocs/0.4.6/).
+Please find the javadocs [here](http://developers.getpeppertalk.com/PepperTalkAndroidSDK/javadocs/0.4.8/).
