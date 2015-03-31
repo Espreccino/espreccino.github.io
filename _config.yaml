@@ -17,4 +17,7 @@ collections:
   web:
     platform: Web SDK
     output: true
+  REST:
+    platform: REST
+    output: true
     
