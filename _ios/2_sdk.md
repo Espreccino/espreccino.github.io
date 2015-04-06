@@ -341,7 +341,10 @@ PepperTalk provides support for in-app notifications. in-app notifications are a
 	- (void) disableInAppNotifications;
 ####Code Snippet
 	//To enable in-app notifications
-	[pepperTalkInstance enableInAppNotificationsInViewController:self.window.rootViewController];
+	NSError *err = [[PepperTalk sharedInstance] initialiseWithUsername:@"USERNAME" fullName:@"DISPLAY_NAME" profilePicture:@"DISPLAY_PIC_URL" completion:^(NSError *loginError) {
+        
+        	[pepperTalkInstance enableInAppNotificationsInViewController:sharedInstance.window.rootViewController];
+	}
 	
 	//To disable in-app notifications
 	[pepperTalkInstance disableInAppNotifications];
