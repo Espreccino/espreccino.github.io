@@ -104,4 +104,19 @@ This callback is triggered to notify the host application of the connection stat
 
 ## Push Notifications
 
-## 
+When you receive a GCM notification you can check with PepperTalk to see if the notification is a Pepper Talk notification or not, and let the SDK handle the notification if it can. The SDK provides two functions one to check if the notification is from Pepper Talk and another to display the notification.
+
+```java
+    protected void onHandleIntent(Intent intent) {
+      //check if the notification is for PepperTalk
+      if (PepperTalk.getInstance(appContext).isNotificationFromPepperTalk(intent)) {
+        // handle the notification
+          PepperTalk.getInstance(appContext).handleNotification(intent,
+                  R.drawable.ic_launcher,
+                  soundUri);
+      } else {
+          //Handle your own notification
+      }
+      GcmBroadcastReceiver.completeWakefulIntent(intent);
+    }
+```
