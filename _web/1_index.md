@@ -222,6 +222,15 @@ Parameters
 * members - required(Array[String]) list of user ids who should be part of the group. The user creating the group is the admin of the group and will be added by default.
 * callback - required (function(err, object))the callback function to be invoked when the data is fetched. Its a standard 2 arg function and the object is the profile of the group
 
+### PepperTalk.createPublicGroup: (groupId, groupName, groupPic, members, callback)
+Create a new public group. 
+Parameters same as **createGroup**
+
+### PepperTalk.createOpenGroup: (groupId, groupName, groupPic, members, callback)
+Create a new open group. 
+Parameters same as **createGroup**
+
+
 ### PepperTalk.updateGroup: (groupId, groupName, groupPic, callback)
 Update the profile of a group. Any member of the group can update the group profile.
 Parameters
