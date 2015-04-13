@@ -49,7 +49,7 @@ Profile Information is optional & can be updated later on.
 
 ####Related API
 	/**
-	 Initialise the SDK with logged in user's details
+	 Initialise the SDK with logged in user's details. The SDK cannot be used used until initialisation passes successfully.
 	 
 	 @param username The logged in user's username
 	 @param fullName The logged in user's full name
