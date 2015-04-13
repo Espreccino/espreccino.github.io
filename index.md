@@ -45,3 +45,7 @@ An open group is one in which the members of the group are administrator control
 ## Participant
 
 Participant is either a user or a group. A message addressed to a group has the group as a participant whereas one addressed to an user has the user as the participant.
+
+## Topics
+
+A chat conversation with a participant can have multiple threads. These are referred to as topics. A topic can have a topic\_id and a topic\_title. id is a unique string which identifies the thread and the title is a descriptive text for the topic.
