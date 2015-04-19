@@ -10,7 +10,6 @@ collection_title : Android
 
 ## Generate ClientID and Client Secret
 Generate Client ID & Client Secret to authenticate your application with PepperTalk. Follow these steps to generate Client ID & Client Secret:
-
 * Go to [PepperTalk Console](https://console.getpeppertalk.com/dashboard/signup)
 * Fill in the details and signup
 * Validate your email address by clicking on the link you get in your email inbox
@@ -29,24 +28,15 @@ Update your client_id and client_secret in [strings.xml] [3]
 Add PepperTalk to your application
 
 Gradle dependency 
-
 ```xml
-    compile 'com.espreccino:peppertalk:0.4.14'
+    compile 'com.espreccino:peppertalk:0.4.15'
 ```
 
 [build.gradle] [2]
 
-```groovy
-dependencies {
-    ...
-    compile 'com.espreccino:peppertalk:0.4.14'
-}
-```
-
 Add ContentProvider to AndroidManifest.xml (Unique authority)
 
 <b>${applicationId}</b> will automatically load your application package name from build.gradle. For different flavours add a suffix.
-
 ```xml
     <provider
             android:name="com.espreccino.peppertalk.io.TalkProvider"
@@ -67,6 +57,21 @@ Initialize PepperTalk
                 .connect();
 ```
 
+InApp Notifications
+
+```java
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+
+        Uri soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        PepperTalk.NotificationBuilder builder = new PepperTalk.NotificationBuilder();
+        builder.notificationStatIcon(R.drawable.ic_stat_notification);
+        builder.soundUri(soundUri);
+        builder.taskStackBuilder(TaskStackBuilder.create(getApplicationContext())
+                .addNextIntentWithParentStack(intent));
+
+        PepperTalk.getInstance(this).enabledInAppNotifications(builder);
+```
+
 Start Conversation
 
 ```java
@@ -82,8 +87,8 @@ Message Listener
 - Unread count
 
 ```java
-PepperTalk.getInstance(context)
-                    .setMessageListener(new PepperTalk.MessageListener() {
+        PepperTalk.getInstance(context)
+                    .registerMessageListener(new PepperTalk.MessageListener() {
                         @Override
                         public void onNewMessage(String userId, String topicId, int unreadCount) {
                             //Update unread count in UI
@@ -91,23 +96,59 @@ PepperTalk.getInstance(context)
                     });
 ```
 
+### Register GCM ID with PepperTalk
+
+```java
+// Use Google Play and Client services to get Registration ID.
+
+PepperTalk.getInstance(context).registerGcm(regId);
+
+```
+
+### Check is notification Intent is from PepperTalk [Code] [6]
+
+```java
+    PepperTalk.getInstance(context).isNotificationFromPepperTalk(intent);
+```
+
+### Handle PepperTalk GCM notification [Code] [7]
+
+```java
+
+      Uri soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+      PepperTalk.NotificationBuilder builder = new PepperTalk.NotificationBuilder();
+      builder.notificationStatIcon(R.drawable.ic_stat_notification);
+      builder.soundUri(soundUri);
+      Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+      builder.taskStackBuilder(TaskStackBuilder.create(getApplicationContext())
+                    .addNextIntentWithParentStack(intent1));
+
+      PepperTalk.getInstance(this).handleNotification(intent, builder);
+```
+
+[Adding GCM service to manifest] [8]
+
 ---
 ### Adding PepperTalk to eclipse project
 ---
 Add the following to your pom.xml [(more info using m2eclipse)] [4]
-
 ```xml
 <dependency>
  <groupId>com.espreccino</groupId>
  <artifactId>peppertalk</artifactId>
- <version>0.4.14</version>
+ <version>0.4.15</version>
 </dependency>
 ````
 
 Download the latest aar [here] [5]
+
+Detailed instructions on setting up Eclipse with ADT is [here](eclipse.html)
 
 [1]: https://console.getpeppertalk.com/ "PepperTalk"
 [2]: https://github.com/Espreccino/PepperTalkAndroidSDK-Examples/blob/master/app/build.gradle "build.gralde"
 [3]: https://github.com/Espreccino/PepperTalkAndroidSDK-Examples/blob/master/app/src/main/res/values/strings.xml#L6 "strings.xml"
 [4]: http://books.sonatype.com/m2eclipse-book/reference/dependencies.html "m2eclipse"
 [5]: https://search.maven.org/#browse%7C-793624875 "PepperTalk SNAPSHOT"
+[6]: https://github.com/Espreccino/PepperTalkAndroidSDK-Examples/blob/master/app/src/main/java/com/espreccino/peppertalk/sample/gcm/GcmIntentService.java#L30
+[7]: https://github.com/Espreccino/PepperTalkAndroidSDK-Examples/blob/master/app/src/main/java/com/espreccino/peppertalk/sample/gcm/GcmIntentService.java#L32
+[8]: https://github.com/Espreccino/PepperTalkAndroidSDK-Examples/blob/master/app/src/main/AndroidManifest.xml#L24

@@ -21,7 +21,7 @@ collection_sections:
 ```groovy
 dependencies {
     ...
-    compile 'com.espreccino:peppertalk:0.4.14'
+    compile 'com.espreccino:peppertalk:0.4.15'
 }
 ```
 
