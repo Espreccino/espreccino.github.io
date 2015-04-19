@@ -29,6 +29,7 @@ Update your client_id and client_secret in [strings.xml] [3]
 Add PepperTalk to your application
 
 Gradle dependency 
+
 ```xml
     compile 'com.espreccino:peppertalk:0.4.15'
 ```
@@ -38,6 +39,7 @@ Gradle dependency
 Add ContentProvider to AndroidManifest.xml (Unique authority)
 
 <b>${applicationId}</b> will automatically load your application package name from build.gradle. For different flavours add a suffix.
+
 ```xml
     <provider
             android:name="com.espreccino.peppertalk.io.TalkProvider"
@@ -62,14 +64,12 @@ InApp Notifications
 
 ```java
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-
         Uri soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         PepperTalk.NotificationBuilder builder = new PepperTalk.NotificationBuilder();
         builder.notificationStatIcon(R.drawable.ic_stat_notification);
         builder.soundUri(soundUri);
         builder.taskStackBuilder(TaskStackBuilder.create(getApplicationContext())
                 .addNextIntentWithParentStack(intent));
-
         PepperTalk.getInstance(this).enabledInAppNotifications(builder);
 ```
 
@@ -123,7 +123,6 @@ PepperTalk.getInstance(context).registerGcm(regId);
       Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
       builder.taskStackBuilder(TaskStackBuilder.create(getApplicationContext())
                     .addNextIntentWithParentStack(intent1));
-
       PepperTalk.getInstance(this).handleNotification(intent, builder);
 ```
 
@@ -133,6 +132,7 @@ PepperTalk.getInstance(context).registerGcm(regId);
 ### Adding PepperTalk to eclipse project
 ---
 Add the following to your pom.xml [(more info using m2eclipse)] [4]
+
 ```xml
 <dependency>
  <groupId>com.espreccino</groupId>
