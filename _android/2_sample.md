@@ -8,6 +8,8 @@ collection_title : Android
 
 ---
 
+## Sample Repository
+Android sample code is present in our [Pepper Talk Android SDK Examples](https://github.com/Espreccino/PepperTalkAndroidSDK-Examples) Github repo.
 ## Generate ClientID and Client Secret
 Generate Client ID & Client Secret to authenticate your application with PepperTalk. Follow these steps to generate Client ID & Client Secret:
 

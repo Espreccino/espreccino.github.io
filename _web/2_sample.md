@@ -9,7 +9,7 @@ collection_title : Web SDK
 ---
 
 ## Introduction
-This is a sample app to demonstrate the JS SDK for Pepper Talk. It contains both the server and the client components. Its built as an Express service for the server and Angular app for the client.
+This is a sample app to demonstrate the JS SDK for Pepper Talk available on our [Pepper Talk Web SDK Example](https://github.com/Espreccino/PepperTalkWebSDKExample) Github repo. It contains both the server and the client components. Its built as an Express service for the server and Angular app for the client.
 
 ## Quick Start
 * git clone *this repo*
