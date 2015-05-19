@@ -20,4 +20,7 @@ collections:
   REST:
     platform: REST
     output: true
+  faq:
+    platform: F.A.Q
+    output: true
     
