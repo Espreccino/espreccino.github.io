@@ -22,6 +22,10 @@ collection_sections:
 
     Yes, we support groups. Please [see groups](http://developers.getpeppertalk.com/#groups) under concepts.
 
+* What are topics? How do I use them?
+
+    Please [see topics](http://developers.getpeppertalk.com/#topics) under concepts.
+
 * What features do I get with PepperTalk?
 
     Pepper Talk supports all standard messaging features
@@ -45,11 +49,11 @@ collection_sections:
 
     Pepper Talk SDK's are available for iOS, Android and Web. You integrate them into your app as per the platform specific instructions.
     
-    For iOS integration refer [instructions here](http://developers.getpeppertalk.com/ios/index.html#getting-started)
+    For iOS integration [see instructions](http://developers.getpeppertalk.com/ios/index.html#getting-started)
     
-    For Android integration refer [instructions here](http://developers.getpeppertalk.com/android/index.html#installing)
+    For Android integration [see instructions](http://developers.getpeppertalk.com/android/index.html#installing)
     
-    For Web integration refere [instructions here](http://developers.getpeppertalk.com/web/index.html#introduction)
+    For Web integration refere [see instructions](http://developers.getpeppertalk.com/web/index.html#introduction)
 
 * Can I have the service hosted in my own servers? Why is it better to not host it myself?
 
@@ -110,9 +114,9 @@ collection_sections:
 * How do I quickly see PepperTalk in action?
 
     Run sample application for the platform of your choice.
-    * [iOS](http://developers.getpeppertalk.com/ios/examples.html)
-    * [Android](http://developers.getpeppertalk.com/android/sample.html)
-    * [Web](http://developers.getpeppertalk.com/web/sample.html)
+    * [iOS Sample](http://developers.getpeppertalk.com/ios/examples.html)
+    * [Android Sample](http://developers.getpeppertalk.com/android/sample.html)
+    * [Web Sample](http://developers.getpeppertalk.com/web/sample.html)
 
 
 ## Technology
@@ -124,6 +128,5 @@ collection_sections:
 * How much load/traffic can PepperTalk servers handle? What about scaling issues?
 * What Device/Platforms are supported?
 * Can the same device be used for multiple logins?
-* What are topics? How do I use them?
 * Where are the images that are shared stored on server side?
 * Does PepperTalk have a REST API which servers can use to send chat messages on behalf of the user?
