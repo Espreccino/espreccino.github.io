@@ -588,3 +588,16 @@ We provide out of box UI for topics list. The topics list can be filtered to sho
 	 */
 	- (NSError *) unmuteParticipants:(NSArray *)participantsToBeUnmuted
 	                      completion:(void(^)(NSDictionary *userInfo, NSError *err))completion
+
+<a id="logout"></a>
+##Logout
+####Related API
+	/**
+	 Logout current logged in user. If current logged in user exists, then its mandatory to logout before logging in another user.
+	 
+	 @param completion Completion callback with results of operation
+	 @return If operation could not be completed, it returns the error. Nil if the operation could complete
+	 */
+	- (NSError *) logoutWithCompletion:(void(^)(NSError *err))completion;
+####Code Snippet
+	[[PepperTalk sharedInstance] logoutWithCompletion:NULL];
