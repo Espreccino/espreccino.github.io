@@ -16,11 +16,15 @@ collection_sections:
 
 * What is PepperTalk?
 
-    Pepper Talk is an in-app messaging SDK. It allows you to have standard messaging features built right into your app. You can enable messaging features between your users or between a group of users.
+    Pepper Talk is a Cross Platform solution that helps Apps embed Rich In-App Chat and Communication features in minutes. We provide iOS, Android & Web SDK, which allows you to enable messaging features between your users or between a group of users.
 
 * Does PepperTalk support groups?
 
-    Yes, we support groups. Please [see groups](/#groups) under concepts.
+    Yes, we support groups. Please [see groups](http://developers.getpeppertalk.com/#groups) under concepts.
+
+* What are topics? How do I use them?
+
+    Please [see topics](http://developers.getpeppertalk.com/#topics) under concepts.
 
 * What features do I get with PepperTalk?
 
@@ -32,6 +36,9 @@ collection_sections:
       * Image sharing
       * Location sharing
       * Message status (delivery, read receipts)
+      * Multi Device Message Sync
+      * User blocking & unblocking
+      * User Muting & Unmuting
       * Typing indicators
       * Custom data sharing
       * Device specific push notifications
@@ -41,6 +48,12 @@ collection_sections:
 * How does PepperTalk work inside my app?
 
     Pepper Talk SDK's are available for iOS, Android and Web. You integrate them into your app as per the platform specific instructions.
+    
+    For iOS integration [see instructions](http://developers.getpeppertalk.com/ios/index.html#getting-started)
+    
+    For Android integration [see instructions](http://developers.getpeppertalk.com/android/index.html#installing)
+    
+    For Web integration refere [see instructions](http://developers.getpeppertalk.com/web/index.html#introduction)
 
 * Can I have the service hosted in my own servers? Why is it better to not host it myself?
 
@@ -56,7 +69,7 @@ collection_sections:
 
 * How to authenticate a user on PepperTalk? Can I use email/phonenumber for login purposes?
 
-    Pepper Talk does not do any user management. Its teh apps responsibility to authenticate users. Once a user is authenticated you pass in the authenticated userid to Pepper Talk and the userid will be created on demand on Pepper Talk.
+    Pepper Talk does not do user authentication. We authenticate the app, and trust the app to authenticate users. Once a user is authenticated by the app, it passes in the authenticated userid to Pepper Talk. Account for a new userid will be provisioned on demand by Pepper Talk.
 
 * Can I have same account on multiple devices? What about syncing?
 
@@ -64,7 +77,7 @@ collection_sections:
 
 * Does PepperTalk store any data?
 
-    Pepper Talk stores data transiently, ie; until the message is delivered to the users device. After that the data is expired from our servers.
+    Pepper Talk stores data transiently, i.e. until the message is delivered to the users device. After that the data is expired from our servers.
 
 * Does PepperTalk provide a feed of all messages?
 
@@ -98,9 +111,12 @@ collection_sections:
 
     A user who connects atleast once in the billing cycle is counted as an active user. The same user could connect from multiple devices or multiple times and would still be counted as a single user.
 
-* How do I try PepperTalk?
+* How do I quickly see PepperTalk in action?
 
-    Check out the platform of your choice, download the sample and see it in action. 
+    Run sample application for the platform of your choice.
+    * [iOS Sample](http://developers.getpeppertalk.com/ios/examples.html)
+    * [Android Sample](http://developers.getpeppertalk.com/android/sample.html)
+    * [Web Sample](http://developers.getpeppertalk.com/web/sample.html)
 
 
 ## Technology
@@ -112,6 +128,5 @@ collection_sections:
 * How much load/traffic can PepperTalk servers handle? What about scaling issues?
 * What Device/Platforms are supported?
 * Can the same device be used for multiple logins?
-* What are topics? How do I use them?
 * Where are the images that are shared stored on server side?
 * Does PepperTalk have a REST API which servers can use to send chat messages on behalf of the user?

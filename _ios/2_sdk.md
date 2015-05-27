@@ -78,39 +78,40 @@ Profile Information is optional & can be updated later on.
 ####Related API
 	/**
 	 Present chat session view modally
-	 
+	
 	 @param participant Pass username of the user with whom chat session is to be initiated
-	 @param options Pass additional configurable options for the chat session. Currently we only support PTSessionOption_TopicId and PTSessionOption_TopicTitle options.
+	 @param topicId an id for the topic
+	 @param topicTitle title for the topic, this will be displayed on the chat window, so ensure it contains a meaningful text representation of the topic
 	 @param presentingViewController Pass the view controller which will be used to present the chat session modally
 	 @return If operation could not be completed, it returns the error. Nil if the operation could complete successfully
 	 */
+
 	- (NSError *) presentChatSessionWithParticipant:(NSString *)participant
-	                                  sessionOptons:(NSDictionary *)options
-	                       presentingViewController:(UIViewController *)presentingViewController;
+                                        topicId:(NSString *)topicId
+                                     topicTitle:(NSString *)topicTitle
+                       presentingViewController:(UIViewController *)presentingViewController;
 
 	/**
-	 Create and return chat session view
+ 	 Create and return chat session view
 	 
-	 @param participant Pass username of the user with whom chat session is to be initiated
-	 @param options Pass additional configurable options for the chat session. Currently we only support PTSessionOption_TopicId and PTSessionOption_TopicTitle options.
+ 	 @param participant Pass username of the user with whom chat session is to be initiated
+	 @param topicId an id for the topic
+	 @param topicTitle title for the topic, this will be displayed on the chat window, so ensure it contains a meaningful text representation of the topic
 	 @param error If an error occurs, the error parameter will be set and the return value will be nil.
 	 @return An instance of UIViewController which can be shown on screen in any way.
 	 */
 	- (UIViewController *) chatSessionWithParticipant:(NSString *)participant
-	                                     sessionOptons:(NSDictionary *)options
-	                                             error:(NSError **)error;
+                                          topicId:(NSString *)topicId
+                                       topicTitle:(NSString *)topicTitle
+                                            error:(NSError **)error;
 
 ####Code Snippet
 	//Present Chat Session in navigation view stack
-	UIViewController *chatSessionVC = [pepperTalkInstance chatSessionWithParticipant:@"PARTICIPANT_USERNAME" sessionOptons:nil error:NULL];
+	UIViewController *chatSessionVC = [pepperTalkInstance chatSessionWithParticipant:@"PARTICIPANT_USERNAME"  topicId:@"SOME_TOPIC_ID" topicTitle:@"SOME_TOPIC_TITLE" error:NULL];
 	[self.navigationController pushViewController:chatSessionVC animated:YES];
 	
 	//Present chat session modally
-	[pepperTalkInstance presentChatSessionWithParticipant:@"PARTICIPANT_USERNAME" sessionOptons:nil presentingViewController:self];
-	
-	//Present chat session for a topic
-	NSDictionary *sessionOptionsDict = @{PTSessionOption_TopicId:@"TOPIC_ID", PTSessionOption_TopicTitle:@"TOPIC_TITLE"};
-	[pepperTalkInstance presentChatSessionWithParticipant:@"PARTICIPANT_USERNAME" sessionOptons:sessionOptionsDict presentingViewController:self];
+	[pepperTalkInstance presentChatSessionWithParticipant:@"PARTICIPANT_USERNAME" topicId:@"SOME_TOPIC_ID" topicTitle:@"SOME_TOPIC_TITLE" presentingViewController:self];
 
 <a id="groupchat"></a> 
 ##Group Chat
@@ -587,3 +588,16 @@ We provide out of box UI for topics list. The topics list can be filtered to sho
 	 */
 	- (NSError *) unmuteParticipants:(NSArray *)participantsToBeUnmuted
 	                      completion:(void(^)(NSDictionary *userInfo, NSError *err))completion
+
+<a id="logout"></a>
+##Logout
+####Related API
+	/**
+	 Logout current logged in user. If current logged in user exists, then its mandatory to logout before logging in another user.
+	 
+	 @param completion Completion callback with results of operation
+	 @return If operation could not be completed, it returns the error. Nil if the operation could complete
+	 */
+	- (NSError *) logoutWithCompletion:(void(^)(NSError *err))completion;
+####Code Snippet
+	[[PepperTalk sharedInstance] logoutWithCompletion:NULL];
