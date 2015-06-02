@@ -5,14 +5,10 @@ title: F.A.Q
 permalink: /faq/index.html
 collection: faq
 collection_title : F.A.Q
-collection_sections:
-  - {title: General, link: general}
-  - {title: Technology, link: technology}
   
 ---
 
 # Frequently Asked Questions
-## General
 
 * What is PepperTalk?
 
@@ -119,12 +115,6 @@ collection_sections:
     * [Web Sample](http://developers.getpeppertalk.com/web/sample.html)
 
 
-## Technology
-
-* What about battery usage?
-* What about network usage?
-* How much size does it add to my app?
-* How are remote notifications handled?
 * How much load/traffic can PepperTalk servers handle? What about scaling issues?
 * What Device/Platforms are supported?
 * Can the same device be used for multiple logins?
