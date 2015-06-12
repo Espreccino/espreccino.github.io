@@ -601,3 +601,30 @@ We provide out of box UI for topics list. The topics list can be filtered to sho
 	- (NSError *) logoutWithCompletion:(void(^)(NSError *err))completion;
 ####Code Snippet
 	[[PepperTalk sharedInstance] logoutWithCompletion:NULL];
+
+<a id="userinfo"></a>
+##User Info
+####Related API
+	/**
+	 Get information for a user. This method can also be used to check if a user exists or not.
+ 
+	 @param userId The id of the user of which you would like to get information
+	 @param completion Completion callback with results of operation
+	 @return If operation could not be completed, it returns the error. Nil if the operation could complete successfully
+	 */
+	- (NSError *) getUserInfo:(NSString *)userId
+               completion:(void(^)(NSDictionary *userInfo, NSError *err))completion;
+
+<a id="groupinfo"></a>
+##Group Info
+####Related API
+	/**
+	 Get information for a group. This method can also be used to check if a group exists or not.
+
+	 @param groupId The id of the group of which you would like to get information
+	 @param completion Completion callback with results of operation
+	 @return If operation could not be completed, it returns the error. Nil if the operation could complete successfully
+	 */
+	- (NSError *) getGroupInfo:(NSString *)groupId
+                completion:(void(^)(NSDictionary *groupInfo, NSError *err))completion;
+
