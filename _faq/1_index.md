@@ -116,7 +116,27 @@ collection_title : F.A.Q
 
 
 * How much load/traffic can PepperTalk servers handle? What about scaling issues?
+
+    We are designed to be horizontally scaleable, we monitor our systems actively and increase capacity as needed to respond to the load. So yes bring it on we will be able to handle your load.
+
 * What Device/Platforms are supported?
+
+    We give SDK's for iOS, Android and Web. We also provide a REST API for automatated interactions.
+
 * Can the same device be used for multiple logins?
+
+    At any point of time only one user can be logged in from a device. SDK's expose the ability to log out the current user, and log in as a new user.
+
 * Where are the images that are shared stored on server side?
+
+    All images are uploaded to an S3 bucket and served from there.
+
 * Does PepperTalk have a REST API which servers can use to send chat messages on behalf of the user?
+
+    Yes we do have a REST API, please see this [documentation](http://developers.getpeppertalk.com/REST/)
+    
+* Are there any limits on the number of messages per second that can be sent?
+
+    We do not limit the number of messages that can be sent under a plan. However we do limit the number of messages per second from a specific device. Currently the limit is 20 messages per second from any device.
+
+
